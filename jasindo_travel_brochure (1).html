@@ -511,7 +511,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    background: var(--blue-deep);
   }
   .map-img-wrap img {
     width: 100%;
@@ -713,10 +713,29 @@
 <div class="page cover">
   <div class="cover-header">
     <div class="logo-danantara">
-      <img src="danantara-white.png" width="100" alt="Peta Kantor Jasindo Indonesia" />
+      <div class="icon">
+        <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 13C5 8.58 8.58 5 13 5C15.76 5 18.18 6.42 19.6 8.6" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M21 13C21 17.42 17.42 21 13 21C10.24 21 7.82 19.58 6.4 17.4" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="13" cy="13" r="3" fill="white"/>
+        </svg>
+      </div>
+      <div class="text">
+        <div class="d">Danantara</div>
+        <div class="s">Indonesia</div>
+      </div>
     </div>
     <div class="logo-jasindo">
-      <img src="jasindo-white.png" width="100" alt="Peta Kantor Jasindo Indonesia" />
+      <div class="brand">
+        <div class="j-icon">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="#0F2D5E"/>
+            <path d="M8 12C8 9.79 9.79 8 12 8C14.21 8 16 9.79 16 12" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M12 12V17" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="jname">asuransi jasindo<span>A member of IFG</span></div>
+      </div>
     </div>
   </div>
 
@@ -762,8 +781,8 @@
           <div class="value">24 Jam (1×24 jam)</div>
         </div>
         <div class="cert-item">
-          <div class="label">Rute Perjalanan</div>
-          <div class="value">SANUR → MUSHROOM BAY</div>
+          <div class="label">Wilayah</div>
+          <div class="value">Domestik Indonesia</div>
         </div>
         <div class="cert-item">
           <div class="label">Total Nilai Pertanggungan</div>
@@ -776,9 +795,7 @@
   <div class="cover-footer">
     <div class="powered-by">
       <div class="pb-text">Powered by</div>
-      <div class="logo-ppib">
-        <img src="pp-boker-logo.png" width="100" alt="Peta Kantor Jasindo Indonesia" />
-      </div>
+      <div class="pp-logo">Pasar<span>Pôlis</span></div>
     </div>
     <div class="ojk">Asuransi Jasindo berizin dan diawasi oleh Otoritas Jasa Keuangan</div>
   </div>
@@ -797,24 +814,40 @@
 
   <div class="section-wrap">
 
-    <!-- Route visual -->
+    <!-- Intro -->
     <div class="route-visual">
       <div class="route-point">
-        <div class="rp-name">SANUR</div>
-        <div class="rp-label">Titik Keberangkatan</div>
+        <div class="rp-name">DOMESTIK</div>
+        <div class="rp-label">Seluruh Wilayah Indonesia</div>
       </div>
       <div class="route-arrow">
         <div class="route-line"></div>
-        <div class="route-plane">✈</div>
+        <div class="route-plane">🛡</div>
         <div class="route-line"></div>
       </div>
       <div class="route-point">
-        <div class="rp-name">MUSHROOM BAY</div>
-        <div class="rp-label">Tujuan Perjalanan</div>
+        <div class="rp-name">PERLINDUNGAN PENUH</div>
+        <div class="rp-label">24 Jam · 1×24 Jam Perjalanan</div>
       </div>
     </div>
 
-   
+    <!-- Features highlight -->
+    <div class="period-band">
+      <div class="pb-item" style="text-align:center;">
+        <div class="pbi-label">⏱ Durasi Perlindungan</div>
+        <div class="pbi-val">1 × 24 Jam</div>
+      </div>
+      <div class="pb-mid">|</div>
+      <div class="pb-item" style="text-align:center;">
+        <div class="pbi-label">💰 Premi Mulai</div>
+        <div class="pbi-val">IDR 17.500 / orang</div>
+      </div>
+      <div class="pb-mid">|</div>
+      <div class="pb-item" style="text-align:center;">
+        <div class="pbi-label">🌍 Wilayah</div>
+        <div class="pbi-val">Domestik Indonesia</div>
+      </div>
+    </div>
 
     <!-- Section label -->
     <div class="section-label">
@@ -996,6 +1029,7 @@
           <div class="info-row"><div class="ir-label">Portal Klaim</div><div class="ir-val" style="font-size:11px;">mkp.ppibroker.com</div></div>
         </div>
       </div>
+
       <div class="info-card">
         <div class="info-card-head" style="background: linear-gradient(90deg, var(--teal), var(--teal-light));">
           <div class="ich-icon"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="white" stroke-width="1.8"/><path d="M10 7V10L12 12" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></div>
@@ -1027,7 +1061,7 @@
         <div class="step-num">1</div>
         <div class="step-content">
           <div class="sc-title">Pemberitahuan Klaim</div>
-          <div class="sc-desc">Hubungi Call Center Jasindo di <strong>1500073</strong> atau kunjungi <strong> https://mkp.ppibroker.com</strong> selambat-lambatnya 45 hari kalender sejak kejadian. Untuk kondisi darurat, hubungi <strong>(+62) 818 343 494</strong> (WhatsApp PPIB) kapanpun.</div>
+          <div class="sc-desc">Hubungi Call Center Jasindo di <strong>1500073</strong> atau kunjungi <strong>www.jasindotravel.co.id</strong> selambat-lambatnya 45 hari kalender sejak kejadian. Untuk kondisi darurat, hubungi <strong>(+62-21) 5093 1111 Ext. 116</strong> (TPA Partner) kapanpun.</div>
         </div>
       </div>
       <div class="step">
@@ -1098,6 +1132,7 @@
 
   </div>
 </div>
+
 
 <!-- ==================== PAGE 4: FAQ ==================== -->
 <div class="page faq-page">
@@ -1282,7 +1317,9 @@
 
   </div>
 </div>
-<!-- ==================== PAGE 5: PETA KANTOR ==================== -->
+
+
+<!-- ==================== PAGE 5: MAP ==================== -->
 <div class="page map-page">
   <div class="map-header">
     <div class="mh-sup">Jaringan Layanan Nasional</div>
@@ -1298,7 +1335,7 @@
 
   <!-- Map image -->
   <div class="map-img-wrap">
-    <img src="Picture1.png" alt="Peta Kantor Jasindo Indonesia" />
+    <img src="/mnt/user-data/uploads/Picture1.png" alt="Peta Kantor Jasindo Indonesia" />
   </div>
 
   <!-- Offices grid -->
