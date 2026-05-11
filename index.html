@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jasindo Travel Insurance – Brosur Asuransi</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -23,15 +24,10 @@
   }
 </script>
 <style>
-  /* Things that can't be expressed in Tailwind utility classes */
   body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-
-  /* Shield hex shape */
   .shield-shape {
     clip-path: polygon(50% 0%, 100% 20%, 100% 70%, 50% 100%, 0% 70%, 0% 20%);
   }
-
-  /* Cover decorative blobs */
   .cover-deco::before {
     content: ''; position: absolute;
     top: -80px; right: -80px;
@@ -44,8 +40,6 @@
     width: 350px; height: 350px; border-radius: 50%;
     background: rgba(249,115,22,.12); pointer-events: none;
   }
-
-  /* Map-header decorative blobs */
   .map-deco::before {
     content: ''; position: absolute;
     top: -40px; left: -40px;
@@ -58,11 +52,7 @@
     width: 250px; height: 250px; border-radius: 50%;
     background: rgba(249,115,22,.10);
   }
-
-  /* Route line (gradient not possible via Tailwind on the line itself) */
   .route-line { flex: 1; height: 2px; background: linear-gradient(90deg,#1A4A8A,#06B6D4); }
-
-  /* Benefit card head gradients */
   .head-blue   { background: linear-gradient(135deg,#0F2D5E,#1A4A8A); }
   .head-teal   { background: linear-gradient(135deg,#0891B2,#06B6D4); }
   .head-orange { background: linear-gradient(135deg,#EA580C,#F97316); }
@@ -73,28 +63,23 @@
 </head>
 <body class="font-lato text-slate-800 bg-slate-100">
 
-<!-- ═══════════════════════════════════════════
-     PAGE 1 · COVER
-════════════════════════════════════════════ -->
+<!-- PAGE 1 · COVER -->
 <div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden">
   <div class="cover-deco relative flex flex-col min-h-screen"
        style="background:linear-gradient(160deg,#0F2D5E 0%,#1A4A8A 45%,#0891B2 100%)">
 
-    <!-- Logos -->
     <div class="relative z-10 flex justify-between items-center px-5 sm:px-10 pt-7">
       <img src="danantara-white.png" width="100" alt="Danantara Indonesia">
       <img src="jasindo-white.png"   width="100" alt="Jasindo">
     </div>
 
-    <!-- Hero -->
     <div class="relative z-10 flex-1 flex flex-col items-center text-center px-5 sm:px-10 pt-10 pb-8">
 
       <!-- Badge -->
-      <div class="inline-block bg-white/[.15] border border-white/30 text-white text-[11px] tracking-[2px] uppercase px-5 py-1.5 rounded-full mb-6 backdrop-blur-sm">
-        🛡 Protection in Every Journey
+      <div class="inline-flex items-center gap-2 bg-white/[.15] border border-white/30 text-white text-[11px] tracking-[2px] uppercase px-5 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+        <i class="fa-solid fa-shield-halved"></i> Protection in Every Journey
       </div>
 
-      <!-- Title -->
       <div class="font-montserrat font-black leading-none text-white mb-3">
         <span class="block text-5xl sm:text-[58px]">Jasindo</span>
         <span class="block text-5xl sm:text-[58px] text-orange-400">Travel</span>
@@ -104,7 +89,6 @@
         Perlindungan menyeluruh selama perjalanan Anda • Domestik &amp; Internasional
       </p>
 
-      <!-- Shield -->
       <div class="w-44 h-52 mx-auto mb-9">
         <div class="shield-shape w-full h-full flex items-center justify-center"
              style="background:linear-gradient(180deg,#06B6D4,#0891B2);box-shadow:0 12px 40px rgba(6,182,212,.5)">
@@ -116,29 +100,28 @@
         </div>
       </div>
 
-      <!-- Feature chips -->
+      <!-- Feature chips with FA icons -->
       <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-9">
         <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
-          <span class="w-2 h-2 rounded-full bg-orange-400 shrink-0"></span>Perlindungan Medis Darurat
+          <i class="fa-solid fa-kit-medical text-orange-400 shrink-0"></i>Perlindungan Medis Darurat
         </div>
         <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
-          <span class="w-2 h-2 rounded-full bg-orange-400 shrink-0"></span>Kecelakaan Diri
+          <i class="fa-solid fa-person-falling-burst text-orange-400 shrink-0"></i>Kecelakaan Diri
         </div>
         <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
-          <span class="w-2 h-2 rounded-full bg-orange-400 shrink-0"></span>Perlindungan Bagasi
+          <i class="fa-solid fa-suitcase-rolling text-orange-400 shrink-0"></i>Perlindungan Bagasi
         </div>
         <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
-          <span class="w-2 h-2 rounded-full bg-orange-400 shrink-0"></span>Penundaan Perjalanan
+          <i class="fa-solid fa-clock-rotate-left text-orange-400 shrink-0"></i>Penundaan Perjalanan
         </div>
         <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
-          <span class="w-2 h-2 rounded-full bg-orange-400 shrink-0"></span>Pembatalan Perjalanan
+          <i class="fa-solid fa-calendar-xmark text-orange-400 shrink-0"></i>Pembatalan Perjalanan
         </div>
         <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
-          <span class="w-2 h-2 rounded-full bg-orange-400 shrink-0"></span>Aktivitas Ekstrim
+          <i class="fa-solid fa-person-running text-orange-400 shrink-0"></i>Aktivitas Ekstrim
         </div>
       </div>
 
-      <!-- Stats card -->
       <div class="bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl px-6 sm:px-8 py-5 w-full max-w-lg mx-auto">
         <div class="grid grid-cols-2 gap-4">
           <div>
@@ -150,18 +133,17 @@
             <p class="text-sm text-white font-bold font-montserrat">24 Jam (1×24 jam)</p>
           </div>
           <div>
-            <p class="text-[10px] text-white/55 tracking-widest uppercase mb-1">Wilayah</p>
-            <p class="text-sm text-white font-bold font-montserrat">Domestik Indonesia</p>
+            <p class="text-[10px] text-white/55 tracking-widest uppercase mb-1">Rute Perjalanan</p>
+            <p class="text-sm text-white font-bold font-montserrat">SANUR → MUSHROOM BAY</p>
           </div>
           <div>
             <p class="text-[10px] text-white/55 tracking-widest uppercase mb-1">Total Nilai Pertanggungan</p>
-            <p class="text-sm text-orange-400 font-bold font-montserrat">Hingga IDR 364 Juta+</p>
+            <p class="text-sm text-orange-400 font-semibold font-montserrat">Hingga IDR 364 Juta+</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Footer -->
     <div class="relative z-10 border-t border-white/15 px-5 sm:px-10 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
       <div class="flex items-center gap-2">
         <span class="text-[10px] text-white/50 tracking-widest uppercase">Powered by</span>
@@ -173,12 +155,9 @@
 </div>
 
 
-<!-- ═══════════════════════════════════════════
-     PAGE 2 · MANFAAT PERTANGGUNGAN
-════════════════════════════════════════════ -->
+<!-- PAGE 2 · MANFAAT PERTANGGUNGAN -->
 <div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden">
 
-  <!-- Page header -->
   <div class="px-5 sm:px-10 py-7 flex justify-between items-center"
        style="background:linear-gradient(90deg,#0F2D5E,#1A4A8A)">
     <div>
@@ -192,7 +171,7 @@
 
   <div class="px-5 sm:px-10 py-8">
 
-    <!-- Route banner -->
+    <!-- Route banner with FA plane -->
     <div class="flex items-center bg-gradient-to-r from-blue-50 via-cyan-50 to-blue-50 border border-slate-200 rounded-2xl px-5 py-4 mb-5">
       <div class="text-center shrink-0">
         <p class="font-montserrat font-extrabold text-base text-blue-deep">SANUR</p>
@@ -200,7 +179,7 @@
       </div>
       <div class="flex-1 flex items-center px-3">
         <div class="route-line"></div>
-        <span class="text-xl px-1">✈</span>
+        <i class="fa-solid fa-plane text-xl px-2 text-blue-mid"></i>
         <div class="route-line"></div>
       </div>
       <div class="text-center shrink-0">
@@ -209,7 +188,6 @@
       </div>
     </div>
 
-    <!-- Section label -->
     <div class="flex items-center gap-3 mb-5">
       <div class="w-1 h-7 bg-orange-500 rounded shrink-0"></div>
       <div>
@@ -218,14 +196,13 @@
       </div>
     </div>
 
-    <!-- Benefit cards grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-7">
 
       <!-- Kecelakaan Diri -->
       <div class="rounded-2xl overflow-hidden border border-slate-200">
         <div class="head-blue px-4 py-3.5 flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6V12C4 16.42 7.36 20.57 12 22C16.64 20.57 20 16.42 20 12V6L12 2Z" stroke="white" stroke-width="2" stroke-linejoin="round"/><path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <i class="fa-solid fa-shield-halved text-white text-xl"></i>
           </div>
           <p class="font-montserrat font-bold text-sm text-white leading-tight">Kecelakaan Diri<br>(Personal Accident)</p>
         </div>
@@ -243,7 +220,7 @@
       <div class="rounded-2xl overflow-hidden border border-slate-200">
         <div class="head-teal px-4 py-3.5 flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-white/[.18] flex items-center justify-center shrink-0">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Z" stroke="white" stroke-width="2"/><path d="M8 12h8M12 8v8" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            <i class="fa-solid fa-kit-medical text-white text-xl"></i>
           </div>
           <p class="font-montserrat font-bold text-sm text-white leading-tight">Perlindungan Medis Darurat<br>(Emergency Medical)</p>
         </div>
@@ -262,7 +239,7 @@
       <div class="rounded-2xl overflow-hidden border border-slate-200">
         <div class="head-orange px-4 py-3.5 flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke="white" stroke-width="2"/><path d="M8 7V5c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v2" stroke="white" stroke-width="2"/><path d="M12 12v3M10 13.5h4" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            <i class="fa-solid fa-suitcase-rolling text-white text-xl"></i>
           </div>
           <p class="font-montserrat font-bold text-sm text-white leading-tight">Perlindungan Bagasi &amp;<br>Barang Pribadi</p>
         </div>
@@ -280,7 +257,7 @@
       <div class="rounded-2xl overflow-hidden border border-slate-200">
         <div class="head-gold px-4 py-3.5 flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/><path d="M12 7v5l3 3" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            <i class="fa-solid fa-clock text-white text-xl"></i>
           </div>
           <p class="font-montserrat font-bold text-sm text-white leading-tight">Penundaan Perjalanan<br>(Travel Delay)</p>
         </div>
@@ -297,7 +274,7 @@
       <div class="rounded-2xl overflow-hidden border border-slate-200">
         <div class="head-purple px-4 py-3.5 flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M12 2L3 7v6c0 4.55 4.08 8.74 9 10 4.92-1.26 9-5.45 9-10V7L12 2Z" stroke="white" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <i class="fa-solid fa-calendar-xmark text-white text-xl"></i>
           </div>
           <p class="font-montserrat font-bold text-sm text-white leading-tight">Pembatalan &amp; Pengurangan<br>Perjalanan</p>
         </div>
@@ -316,7 +293,7 @@
       <div class="rounded-2xl overflow-hidden border border-slate-200">
         <div class="head-green px-4 py-3.5 flex items-center gap-3">
           <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
-            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M12 2L4.5 8.5v7C4.5 18.54 7.82 21.46 12 22.5 16.18 21.46 19.5 18.54 19.5 15.5v-7L12 2Z" stroke="white" stroke-width="2"/><path d="M9 12l2 2.5 4.5-4.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <i class="fa-solid fa-person-running text-white text-xl"></i>
           </div>
           <p class="font-montserrat font-bold text-sm text-white leading-tight">Aktivitas Ekstrim &amp;<br>Wahana Permainan</p>
         </div>
@@ -330,9 +307,8 @@
         </div>
       </div>
 
-    </div><!-- /grid -->
+    </div>
 
-    <!-- Total summary bar -->
     <div class="rounded-2xl px-5 sm:px-7 py-5 flex flex-col sm:flex-row justify-around items-center gap-4 text-center"
          style="background:linear-gradient(90deg,#0F2D5E,#0891B2)">
       <div>
@@ -360,9 +336,7 @@
 </div>
 
 
-<!-- ═══════════════════════════════════════════
-     PAGE 3 · INFORMASI POLIS & KLAIM
-════════════════════════════════════════════ -->
+<!-- PAGE 3 · INFORMASI POLIS & KLAIM -->
 <div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden">
 
   <div class="px-5 sm:px-10 py-7 flex justify-between items-center"
@@ -378,23 +352,22 @@
 
   <div class="px-5 sm:px-10 py-8">
 
-    <!-- Callout -->
+    <!-- Callout with FA warning icon -->
     <div class="bg-gradient-to-br from-orange-50 to-amber-100 border-2 border-orange-400 rounded-2xl px-5 py-4 flex items-start gap-3.5 mb-6">
-      <span class="text-3xl shrink-0">⚠️</span>
+      <i class="fa-solid fa-triangle-exclamation text-3xl text-orange-500 shrink-0 mt-0.5"></i>
       <div>
         <p class="font-montserrat font-extrabold text-sm text-orange-700 mb-1">Penting Dibaca Sebelum Perjalanan</p>
         <p class="text-xs text-amber-900 leading-relaxed">Semua manfaat dalam brosur ini merupakan nilai maksimum. Pelaksanaan pembayaran mengacu pada ketentuan Polis Induk. Simpan brosur ini dan hubungi call center 1500073 dalam kondisi darurat.</p>
       </div>
     </div>
 
-    <!-- Two cards -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
 
       <!-- Detail Produk -->
       <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
         <div class="bg-blue-deep px-5 py-3.5 flex items-center gap-2.5">
           <div class="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center">
-            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="2" stroke="white" stroke-width="1.8"/><path d="M7 9h6M7 12h3" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <i class="fa-solid fa-file-lines text-white text-sm"></i>
           </div>
           <span class="font-montserrat font-bold text-sm text-white">Detail Produk</span>
         </div>
@@ -412,7 +385,7 @@
       <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
         <div class="px-5 py-3.5 flex items-center gap-2.5" style="background:linear-gradient(90deg,#0891B2,#06B6D4)">
           <div class="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center">
-            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="white" stroke-width="1.8"/><path d="M10 7v3l2 2" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <i class="fa-solid fa-clock text-white text-sm"></i>
           </div>
           <span class="font-montserrat font-bold text-sm text-white">Ketentuan Polis</span>
         </div>
@@ -428,7 +401,6 @@
 
     </div>
 
-    <!-- Claim steps label -->
     <div class="flex items-center gap-3 mb-4">
       <div class="w-1 h-7 bg-orange-500 rounded shrink-0"></div>
       <div>
@@ -437,59 +409,93 @@
       </div>
     </div>
 
-    <!-- Steps -->
+    <!-- Steps with FA icons on titles -->
     <div class="divide-y divide-slate-200 mb-6">
       <div class="flex gap-4 items-start py-3.5">
         <div class="w-9 h-9 rounded-full bg-blue-mid text-white font-montserrat font-extrabold text-[15px] flex items-center justify-center shrink-0">1</div>
-        <div><p class="font-montserrat font-bold text-sm text-blue-deep mb-1">Pemberitahuan Klaim</p><p class="text-xs text-slate-500 leading-relaxed">Hubungi Call Center Jasindo di <strong>1500073</strong> atau kunjungi <strong>https://mkp.ppibroker.com</strong> max. 45 hari kalender sejak kejadian. Darurat: <strong>(+62) 818 343 494</strong> (WhatsApp PPIB).</p></div>
+        <div>
+          <p class="font-montserrat font-bold text-sm text-blue-deep mb-1">
+            <i class="fa-solid fa-bell text-orange-400 mr-1.5"></i>Pemberitahuan Klaim
+          </p>
+          <p class="text-xs text-slate-500 leading-relaxed">Hubungi Call Center Jasindo di <strong>1500073</strong> atau kunjungi <strong>https://mkp.ppibroker.com</strong> max. 45 hari kalender sejak kejadian. Darurat: <strong>(+62) 818 343 494</strong> (WhatsApp PPIB).</p>
+        </div>
       </div>
       <div class="flex gap-4 items-start py-3.5">
         <div class="w-9 h-9 rounded-full bg-blue-mid text-white font-montserrat font-extrabold text-[15px] flex items-center justify-center shrink-0">2</div>
-        <div><p class="font-montserrat font-bold text-sm text-blue-deep mb-1">Kelengkapan Dokumen</p><p class="text-xs text-slate-500 leading-relaxed">Formulir klaim, fotokopi polis &amp; identitas (KTP/Paspor), tiket &amp; boarding pass, laporan dari pihak berwenang, resume medis (jika berlaku).</p></div>
+        <div>
+          <p class="font-montserrat font-bold text-sm text-blue-deep mb-1">
+            <i class="fa-solid fa-folder-open text-orange-400 mr-1.5"></i>Kelengkapan Dokumen
+          </p>
+          <p class="text-xs text-slate-500 leading-relaxed">Formulir klaim, fotokopi polis &amp; identitas (KTP/Paspor), tiket &amp; boarding pass, laporan dari pihak berwenang, resume medis (jika berlaku).</p>
+        </div>
       </div>
       <div class="flex gap-4 items-start py-3.5">
         <div class="w-9 h-9 rounded-full bg-blue-mid text-white font-montserrat font-extrabold text-[15px] flex items-center justify-center shrink-0">3</div>
-        <div><p class="font-montserrat font-bold text-sm text-blue-deep mb-1">Proses Verifikasi</p><p class="text-xs text-slate-500 leading-relaxed">Tim klaim Jasindo memverifikasi dokumen. FCR: 1 hari kerja; Non-FCR: maks. 10 hari kerja setelah dokumen lengkap diterima.</p></div>
+        <div>
+          <p class="font-montserrat font-bold text-sm text-blue-deep mb-1">
+            <i class="fa-solid fa-magnifying-glass text-orange-400 mr-1.5"></i>Proses Verifikasi
+          </p>
+          <p class="text-xs text-slate-500 leading-relaxed">Tim klaim Jasindo memverifikasi dokumen. FCR: 1 hari kerja; Non-FCR: maks. 10 hari kerja setelah dokumen lengkap diterima.</p>
+        </div>
       </div>
       <div class="flex gap-4 items-start py-3.5">
         <div class="w-9 h-9 rounded-full bg-blue-mid text-white font-montserrat font-extrabold text-[15px] flex items-center justify-center shrink-0">4</div>
-        <div><p class="font-montserrat font-bold text-sm text-blue-deep mb-1">Pembayaran Klaim</p><p class="text-xs text-slate-500 leading-relaxed">Setelah persetujuan, pembayaran ditransfer dalam <strong>30 hari kalender</strong>. Klaim yang diterima membebaskan Penanggung dari seluruh kewajiban atas manfaat yang bersangkutan.</p></div>
+        <div>
+          <p class="font-montserrat font-bold text-sm text-blue-deep mb-1">
+            <i class="fa-solid fa-money-bill-transfer text-orange-400 mr-1.5"></i>Pembayaran Klaim
+          </p>
+          <p class="text-xs text-slate-500 leading-relaxed">Setelah persetujuan, pembayaran ditransfer dalam <strong>30 hari kalender</strong>. Klaim yang diterima membebaskan Penanggung dari seluruh kewajiban atas manfaat yang bersangkutan.</p>
+        </div>
       </div>
     </div>
 
-    <!-- Exclusions label -->
     <div class="flex items-center gap-3 mb-3">
       <div class="w-1 h-7 bg-orange-600 rounded shrink-0"></div>
       <p class="font-montserrat font-extrabold text-base text-orange-700">Hal-Hal yang Tidak Ditanggung</p>
     </div>
+    <!-- Exclusions with FA xmark -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
-      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><span class="text-sm shrink-0">✕</span><span class="text-[11.5px] text-red-900 leading-relaxed">Kondisi medis yang sudah ada sebelum perjalanan (Pre-existing condition)</span></div>
-      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><span class="text-sm shrink-0">✕</span><span class="text-[11.5px] text-red-900 leading-relaxed">Perjalanan yang bertentangan dengan saran dokter</span></div>
-      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><span class="text-sm shrink-0">✕</span><span class="text-[11.5px] text-red-900 leading-relaxed">Tindakan melawan hukum, bunuh diri, atau sengaja mencederai diri</span></div>
-      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><span class="text-sm shrink-0">✕</span><span class="text-[11.5px] text-red-900 leading-relaxed">Perang, kerusuhan, terorisme, bencana nuklir/kimia/biologi</span></div>
-      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><span class="text-sm shrink-0">✕</span><span class="text-[11.5px] text-red-900 leading-relaxed">Penyalahgunaan obat/alkohol atau narkoba</span></div>
-      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><span class="text-sm shrink-0">✕</span><span class="text-[11.5px] text-red-900 leading-relaxed">Kelalaian pribadi Tertanggung dalam menjaga barang bawaan</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Kondisi medis yang sudah ada sebelum perjalanan (Pre-existing condition)</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Perjalanan yang bertentangan dengan saran dokter</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Tindakan melawan hukum, bunuh diri, atau sengaja mencederai diri</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Perang, kerusuhan, terorisme, bencana nuklir/kimia/biologi</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Penyalahgunaan obat/alkohol atau narkoba</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Kelalaian pribadi Tertanggung dalam menjaga barang bawaan</span></div>
     </div>
 
-    <!-- Contact bar -->
+    <!-- Contact bar with FA icons -->
     <div class="rounded-2xl px-5 sm:px-7 py-6 flex flex-col sm:flex-row justify-around items-center flex-wrap gap-5"
          style="background:linear-gradient(90deg,#0F2D5E,#1A4A8A)">
-      <div class="text-center"><div class="text-2xl mb-1.5">📞</div><p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Call Center</p><p class="font-montserrat font-bold text-sm text-white">1500073</p></div>
+      <div class="text-center">
+        <i class="fa-solid fa-phone text-2xl text-white/80 mb-1.5 block"></i>
+        <p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Call Center</p>
+        <p class="font-montserrat font-bold text-sm text-white">1500073</p>
+      </div>
       <div class="hidden sm:block w-px h-12 bg-white/15"></div>
-      <div class="text-center"><div class="text-2xl mb-1.5">🌐</div><p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Website</p><p class="font-montserrat font-bold text-sm text-white">jasindo.co.id</p></div>
+      <div class="text-center">
+        <i class="fa-solid fa-globe text-2xl text-white/80 mb-1.5 block"></i>
+        <p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Website</p>
+        <p class="font-montserrat font-bold text-sm text-white">jasindo.co.id</p>
+      </div>
       <div class="hidden sm:block w-px h-12 bg-white/15"></div>
-      <div class="text-center"><div class="text-2xl mb-1.5">📧</div><p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Email</p><p class="font-montserrat font-bold text-xs text-white">jasindo@asuransijasindo.co.id</p></div>
+      <div class="text-center">
+        <i class="fa-solid fa-envelope text-2xl text-white/80 mb-1.5 block"></i>
+        <p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Email</p>
+        <p class="font-montserrat font-bold text-xs text-white">contactcenter@jasindo.co.id</p>
+      </div>
       <div class="hidden sm:block w-px h-12 bg-white/15"></div>
-      <div class="text-center"><div class="text-2xl mb-1.5">🏢</div><p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Darurat 24 Jam</p><p class="font-montserrat font-bold text-sm text-white">(+62-21) 5093 1111</p></div>
+      <div class="text-center">
+        <i class="fa-solid fa-building text-2xl text-white/80 mb-1.5 block"></i>
+        <p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Darurat 24 Jam</p>
+        <p class="font-montserrat font-bold text-sm text-white">(021) 3924737</p>
+      </div>
     </div>
 
   </div>
 </div>
 
 
-<!-- ═══════════════════════════════════════════
-     PAGE 4 · FAQ
-════════════════════════════════════════════ -->
+<!-- PAGE 4 · FAQ -->
 <div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden">
 
   <div class="px-5 sm:px-10 py-7 flex justify-between items-center"
@@ -505,118 +511,43 @@
 
   <div class="px-5 sm:px-10 py-8">
 
-    <!-- FAQ grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">01</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apa itu Travel &amp; Refund Protection ini?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Jasindo Travel Insurance adalah perlindungan tambahan yang memberikan manfaat perlindungan kecelakaan, refund tiket 100%, hingga kehilangan barang selama perjalanan.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">02</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apa bedanya dengan asuransi wajib dari Jasa Raharja?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Asuransi Wajib Jasa Raharja hanya berlaku jika terjadi kecelakaan kapal, sedangkan Travel &amp; Refund Protection tidak harus ada kecelakaan kapal yang terjadi.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">03</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Berapa harga premi dan apakah berlaku per orang?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Premi dibayarkan per penumpang dan akan ditampilkan saat proses pembelian tiket. Besaran premi mengikuti ketentuan yang berlaku pada sistem saat transaksi.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">04</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Kapan perlindungan mulai dan berakhir?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Perlindungan berlaku sesuai tanggal perjalanan yang tercantum pada tiket dan polis, dengan masa pertanggungan hingga 1×24 jam sesuai ketentuan produk.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">05</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Jenis kecelakaan apa saja yang ditanggung?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Kecelakaan yang terjadi secara tiba-tiba, tidak disengaja, dan menyebabkan cedera, cacat tetap, atau meninggal dunia sesuai ketentuan polis.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">06</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apakah perlindungan hanya berlaku saat di atas kapal?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Perlindungan juga berlaku di perjalanan dan di mana pun berada selama dalam jangka waktu polis yaitu 1 hari pada tanggal keberangkatan.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">07</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apakah sakit mendadak sebelum keberangkatan bisa diklaim?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Untuk reimbursement tiket perjalanan bisa diklaim. Namun untuk pengobatan selain kecelakaan dan di luar tanggal keberangkatan tidak di-cover.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">08</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Berapa maksimal santunan yang bisa diterima?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Santunan maksimal sesuai dengan tabel benefit yang tertera, namun biasanya yang dibayarkan sesuai harga tiket/nota.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">09</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Bagaimana cara mengajukan klaim?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Kunjungi portal klaim di <strong class="text-blue-mid">mkp.ppibroker.com</strong>, login menggunakan nomor HP dan OTP. Detail juga dikirim ke email Anda setelah pembelian polis.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">10</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Barang apa saja yang ditanggung jika terjadi kehilangan?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Barang elektronik, tas, dan jam tangan, sesuai batas dan ketentuan yang tercantum dalam polis atau ringkasan produk (RIPLAY).</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">11</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Dokumen apa saja yang diperlukan untuk klaim?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Identitas diri, tiket perjalanan, brosur asuransi, dan dokumen pendukung sesuai jenis klaim. Detail diinformasikan via portal klaim.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">12</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Berapa lama proses klaim hingga dana cair?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Estimasi penyelesaian maksimal <strong class="text-blue-mid">7 hari kerja</strong> setelah dokumen dinyatakan lengkap dan sesuai.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-gradient-to-br from-blue-50 to-cyan-50 border border-cyan-300 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-cyan-500/50 leading-none shrink-0 w-7 text-right pt-px">13</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Ke mana menghubungi jika ingin klaim atau butuh bantuan?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">WhatsApp PPIB: <strong class="text-blue-mid">(+62) 818 343 494</strong> · Call Center: <strong class="text-blue-mid">1500073</strong> · Portal: <strong class="text-blue-mid">mkp.ppibroker.com</strong></p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">14</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apakah saya akan menerima brosur polis setelah membeli asuransi?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Ya, Anda dapat melihat dan mengunduh brosur polis di <strong class="text-blue-mid">mkp.ppibroker.com</strong> dengan login menggunakan nomor HP dan OTP.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">15</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Bagaimana cara melihat atau mengunduh polis saya?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Login di <strong class="text-blue-mid">mkp.ppibroker.com</strong> menggunakan nomor HP dan OTP, lalu pilih card polis yang ingin diunduh.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">16</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apa yang harus dilakukan jika data manifest atau penumpang salah?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Segera hubungi WhatsApp PPIB <strong class="text-blue-mid">(+62) 818 343 494</strong> dengan menyertakan data transaksi dan identitas.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">17</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Nomor HP saat pembelian hilang atau tidak aktif?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Segera hubungi WhatsApp PPIB <strong class="text-blue-mid">(+62) 818 343 494</strong> untuk melakukan perubahan data dengan menyertakan data transaksi dan identitas.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">18</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Kenapa klaim saya ditolak atau belum menerima pembayaran?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Klaim dapat ditolak apabila tidak memenuhi ketentuan polis, termasuk risiko yang tidak dijamin atau dokumen tidak lengkap.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-gradient-to-br from-blue-50 to-cyan-50 border border-cyan-300 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-cyan-500/50 leading-none shrink-0 w-7 text-right pt-px">19</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apakah produk ini resmi dan diawasi oleh OJK?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Produk ini diterbitkan oleh PT Asuransi Jasa Indonesia, anggota IFG, di bawah pengawasan <strong class="text-blue-mid">Otoritas Jasa Keuangan (OJK)</strong>.</p></div></div>
+    </div>
 
-      <!-- Reusable FAQ item pattern -->
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">01</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apa itu Travel &amp; Refund Protection ini?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Jasindo Travel Insurance adalah perlindungan tambahan yang memberikan manfaat perlindungan kecelakaan, refund tiket 100%, hingga kehilangan barang selama perjalanan.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">02</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apa bedanya dengan asuransi wajib dari Jasa Raharja?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Asuransi Wajib Jasa Raharja hanya berlaku jika terjadi kecelakaan kapal, sedangkan Travel &amp; Refund Protection tidak harus ada kecelakaan kapal yang terjadi.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">03</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Berapa harga premi dan apakah berlaku per orang?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Premi dibayarkan per penumpang dan akan ditampilkan saat proses pembelian tiket. Besaran premi mengikuti ketentuan yang berlaku pada sistem saat transaksi.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">04</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Kapan perlindungan mulai dan berakhir?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Perlindungan berlaku sesuai tanggal perjalanan yang tercantum pada tiket dan polis, dengan masa pertanggungan hingga 1×24 jam sesuai ketentuan produk.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">05</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Jenis kecelakaan apa saja yang ditanggung?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Kecelakaan yang terjadi secara tiba-tiba, tidak disengaja, dan menyebabkan cedera, cacat tetap, atau meninggal dunia sesuai ketentuan polis.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">06</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apakah perlindungan hanya berlaku saat di atas kapal?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Perlindungan juga berlaku di perjalanan dan di mana pun berada selama dalam jangka waktu polis yaitu 1 hari pada tanggal keberangkatan.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">07</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apakah sakit mendadak sebelum keberangkatan bisa diklaim?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Untuk reimbursement tiket perjalanan bisa diklaim. Namun untuk pengobatan selain kecelakaan dan di luar tanggal keberangkatan tidak di-cover.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">08</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Berapa maksimal santunan yang bisa diterima?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Santunan maksimal sesuai dengan tabel benefit yang tertera, namun biasanya yang dibayarkan sesuai harga tiket/nota.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">09</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Bagaimana cara mengajukan klaim?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Kunjungi portal klaim di <strong class="text-blue-mid">mkp.ppibroker.com</strong>, login menggunakan nomor HP dan OTP. Detail juga dikirim ke email Anda setelah pembelian polis.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">10</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Barang apa saja yang ditanggung jika terjadi kehilangan?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Barang elektronik, tas, dan jam tangan, sesuai batas dan ketentuan yang tercantum dalam polis atau ringkasan produk (RIPLAY).</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">11</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Dokumen apa saja yang diperlukan untuk klaim?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Identitas diri, tiket perjalanan, brosur asuransi, dan dokumen pendukung sesuai jenis klaim. Detail diinformasikan via portal klaim.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">12</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Berapa lama proses klaim hingga dana cair?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Estimasi penyelesaian maksimal <strong class="text-blue-mid">7 hari kerja</strong> setelah dokumen dinyatakan lengkap dan sesuai.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-gradient-to-br from-blue-50 to-cyan-50 border border-cyan-300 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-cyan-500/50 leading-none shrink-0 w-7 text-right pt-px">13</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Ke mana menghubungi jika ingin klaim atau butuh bantuan?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">WhatsApp PPIB: <strong class="text-blue-mid">(+62) 818 343 494</strong> · Call Center: <strong class="text-blue-mid">1500073</strong> · Portal: <strong class="text-blue-mid">mkp.ppibroker.com</strong></p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">14</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apakah saya akan menerima brosur polis setelah membeli asuransi?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Ya, Anda dapat melihat dan mengunduh brosur polis di <strong class="text-blue-mid">mkp.ppibroker.com</strong> dengan login menggunakan nomor HP dan OTP.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">15</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Bagaimana cara melihat atau mengunduh polis saya?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Login di <strong class="text-blue-mid">mkp.ppibroker.com</strong> menggunakan nomor HP dan OTP, lalu pilih card polis yang ingin diunduh.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">16</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apa yang harus dilakukan jika data manifest atau penumpang salah?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Segera hubungi WhatsApp PPIB <strong class="text-blue-mid">(+62) 818 343 494</strong> dengan menyertakan data transaksi dan identitas.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">17</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Nomor HP saat pembelian hilang atau tidak aktif?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Segera hubungi WhatsApp PPIB <strong class="text-blue-mid">(+62) 818 343 494</strong> untuk melakukan perubahan data dengan menyertakan data transaksi dan identitas.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">18</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Kenapa klaim saya ditolak atau belum menerima pembayaran?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Klaim dapat ditolak apabila tidak memenuhi ketentuan polis, termasuk risiko yang tidak dijamin atau dokumen tidak lengkap.</p></div>
-      </div>
-
-      <div class="flex gap-3.5 items-start bg-gradient-to-br from-blue-50 to-cyan-50 border border-cyan-300 rounded-xl px-4 py-3.5">
-        <span class="font-montserrat font-black text-xl text-cyan-500/50 leading-none shrink-0 w-7 text-right pt-px">19</span>
-        <div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Apakah produk ini resmi dan diawasi oleh OJK?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Produk ini diterbitkan oleh PT Asuransi Jasa Indonesia, anggota IFG, di bawah pengawasan <strong class="text-blue-mid">Otoritas Jasa Keuangan (OJK)</strong>.</p></div>
-      </div>
-
-    </div><!-- /faq grid -->
-
-    <!-- CTA -->
+    <!-- CTA with FA icons -->
     <div class="rounded-2xl px-5 sm:px-7 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-5"
          style="background:linear-gradient(90deg,#0F2D5E,#0891B2)">
-      <span class="text-3xl shrink-0">💬</span>
+      <i class="fa-solid fa-comments text-3xl text-white/80 shrink-0"></i>
       <div class="flex-1">
         <p class="font-montserrat font-extrabold text-base text-white mb-1">Masih ada pertanyaan?</p>
         <p class="text-xs text-white/70">Hubungi tim kami melalui WhatsApp atau Call Center untuk bantuan lebih lanjut</p>
       </div>
       <div class="flex flex-row sm:flex-col gap-2 w-full sm:w-auto shrink-0">
-        <div class="bg-white/15 border border-white/30 text-white px-4 py-2 rounded-lg text-xs font-bold font-montserrat text-center whitespace-nowrap">📱 WA: (+62) 818 343 494</div>
-        <div class="bg-orange-500 text-white px-4 py-2 rounded-lg text-xs font-bold font-montserrat text-center whitespace-nowrap">📞 1500073</div>
+        <div class="bg-white/15 border border-white/30 text-white px-4 py-2 rounded-lg text-xs font-bold font-montserrat text-center whitespace-nowrap flex items-center justify-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-green-400"></i> WA: (+62) 818 343 494
+        </div>
+        <div class="bg-orange-500 text-white px-4 py-2 rounded-lg text-xs font-bold font-montserrat text-center whitespace-nowrap flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-phone"></i> 1500073
+        </div>
       </div>
     </div>
 
@@ -624,12 +555,9 @@
 </div>
 
 
-<!-- ═══════════════════════════════════════════
-     PAGE 5 · PETA KANTOR
-════════════════════════════════════════════ -->
+<!-- PAGE 5 · PETA KANTOR -->
 <div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden flex flex-col">
 
-  <!-- Map header -->
   <div class="map-deco relative overflow-hidden px-5 sm:px-10 py-9 text-center"
        style="background:linear-gradient(135deg,#0F2D5E,#0891B2)">
     <p class="relative z-10 text-[11px] text-white/60 tracking-[2px] uppercase mb-2.5">Jaringan Layanan Nasional</p>
@@ -639,64 +567,67 @@
     <p class="relative z-10 text-sm text-white/70 mt-2">Kami hadir di setiap sudut nusantara — siap membantu kapanpun Anda membutuhkan</p>
   </div>
 
-  <!-- Stats -->
   <div class="flex justify-center gap-8 sm:gap-10 px-5 sm:px-10 pt-6">
     <div class="text-center"><p class="font-montserrat font-black text-4xl text-orange-500 leading-none">30</p><p class="text-xs text-slate-500 mt-1">Kantor Perwakilan</p></div>
     <div class="text-center"><p class="font-montserrat font-black text-4xl text-orange-500 leading-none">24/7</p><p class="text-xs text-slate-500 mt-1">Layanan Darurat</p></div>
     <div class="text-center"><p class="font-montserrat font-black text-2xl sm:text-3xl text-orange-500 leading-none">1500073</p><p class="text-xs text-slate-500 mt-1">Call Center</p></div>
   </div>
 
-  <!-- Map image -->
-  <div class="flex-1 px-5 sm:px-10 py-4 flex items-center justify-center ">
+  <div class="flex-1 px-5 sm:px-10 py-4 flex items-center justify-center">
     <img src="Picture1.png" alt="Peta Kantor Jasindo Indonesia" class="w-full max-h-80 sm:max-h-96 object-contain rounded-lg">
   </div>
 
-  <!-- Offices grid -->
+  <!-- Offices grid with FA location-dot -->
   <div class="px-5 sm:px-10 py-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Medan</p><p class="text-[10px] text-cyan-600">(061) 4236448</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Pekanbaru</p><p class="text-[10px] text-cyan-600">(0761) 35858</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Batam</p><p class="text-[10px] text-cyan-600">(0778) 456727</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Padang</p><p class="text-[10px] text-cyan-600">(0751) 7415620</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Jambi</p><p class="text-[10px] text-cyan-600">(0741) 63104</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Palembang</p><p class="text-[10px] text-cyan-600">(0711) 357479</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Bandar Lampung</p><p class="text-[10px] text-cyan-600">(0721) 268364</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Serang</p><p class="text-[10px] text-cyan-600">(0254) 8486424</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Jakarta 2</p><p class="text-[10px] text-cyan-600">(021) 29020046</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Bogor</p><p class="text-[10px] text-cyan-600">(0251) 862718</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Bandung</p><p class="text-[10px] text-cyan-600">(022) 4221858</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Semarang</p><p class="text-[10px] text-cyan-600">(024) 8414082</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Yogyakarta</p><p class="text-[10px] text-cyan-600">(0274) 512778</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Solo</p><p class="text-[10px] text-cyan-600">(0271) 741497</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Surabaya</p><p class="text-[10px] text-cyan-600">(031) 5670912</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Pontianak</p><p class="text-[10px] text-cyan-600">(0561) 732446</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Sampit</p><p class="text-[10px] text-cyan-600">(0531) 21741</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Banjarmasin</p><p class="text-[10px] text-cyan-600">(0511) 3526872</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Samarinda</p><p class="text-[10px] text-cyan-600">(0541) 742571</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Balikpapan</p><p class="text-[10px] text-cyan-600">(0542) 413495</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Makassar</p><p class="text-[10px] text-cyan-600">(0411) 8737888</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Kendari</p><p class="text-[10px] text-cyan-600">(0401) 3121764</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Manado</p><p class="text-[10px] text-cyan-600">(0431) 863466</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Palu</p><p class="text-[10px] text-cyan-600">(0451) 421898</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Denpasar</p><p class="text-[10px] text-cyan-600">(0361) 225327</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Mataram</p><p class="text-[10px] text-cyan-600">(0370) 865422</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Kupang</p><p class="text-[10px] text-cyan-600">(0380) 736446</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Ambon</p><p class="text-[10px] text-cyan-600">(0911) 352262</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Sorong</p><p class="text-[10px] text-cyan-600">(0951) 302344</p></div>
-    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1">Jayapura</p><p class="text-[10px] text-cyan-600">(0967) 5108458</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Medan</p><p class="text-[10px] text-cyan-600">(061) 4236448</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Pekanbaru</p><p class="text-[10px] text-cyan-600">(0761) 35858</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Batam</p><p class="text-[10px] text-cyan-600">(0778) 456727</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Padang</p><p class="text-[10px] text-cyan-600">(0751) 7415620</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Jambi</p><p class="text-[10px] text-cyan-600">(0741) 63104</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Palembang</p><p class="text-[10px] text-cyan-600">(0711) 357479</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Bandar Lampung</p><p class="text-[10px] text-cyan-600">(0721) 268364</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Serang</p><p class="text-[10px] text-cyan-600">(0254) 8486424</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Jakarta 2</p><p class="text-[10px] text-cyan-600">(021) 29020046</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Bogor</p><p class="text-[10px] text-cyan-600">(0251) 862718</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Bandung</p><p class="text-[10px] text-cyan-600">(022) 4221858</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Semarang</p><p class="text-[10px] text-cyan-600">(024) 8414082</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Yogyakarta</p><p class="text-[10px] text-cyan-600">(0274) 512778</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Solo</p><p class="text-[10px] text-cyan-600">(0271) 741497</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Surabaya</p><p class="text-[10px] text-cyan-600">(031) 5670912</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Pontianak</p><p class="text-[10px] text-cyan-600">(0561) 732446</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Sampit</p><p class="text-[10px] text-cyan-600">(0531) 21741</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Banjarmasin</p><p class="text-[10px] text-cyan-600">(0511) 3526872</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Samarinda</p><p class="text-[10px] text-cyan-600">(0541) 742571</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Balikpapan</p><p class="text-[10px] text-cyan-600">(0542) 413495</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Makassar</p><p class="text-[10px] text-cyan-600">(0411) 8737888</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Kendari</p><p class="text-[10px] text-cyan-600">(0401) 3121764</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Manado</p><p class="text-[10px] text-cyan-600">(0431) 863466</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Palu</p><p class="text-[10px] text-cyan-600">(0451) 421898</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Denpasar</p><p class="text-[10px] text-cyan-600">(0361) 225327</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Mataram</p><p class="text-[10px] text-cyan-600">(0370) 865422</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Kupang</p><p class="text-[10px] text-cyan-600">(0380) 736446</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Ambon</p><p class="text-[10px] text-cyan-600">(0911) 352262</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Sorong</p><p class="text-[10px] text-cyan-600">(0951) 302344</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Jayapura</p><p class="text-[10px] text-cyan-600">(0967) 5108458</p></div>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer with FA brands -->
   <div class="bg-blue-deep px-5 sm:px-10 py-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
     <div>
-      <p class="font-montserrat font-extrabold text-lg text-white">asuransi <span class="text-orange-400">jasindo</span></p>
-      <p class="text-[11px] text-white/55 mt-0.5 tracking-wide">Protection in Every Journey · A member of IFG</p>
+      <img src="jasindo-white.png"   width="100" alt="Jasindo">
     </div>
-    <div class="flex gap-3 sm:gap-4 items-center flex-wrap">
-      <a href="#" class="text-[11px] text-white/60 no-underline">🐦 @JasindoID</a>
-      <a href="#" class="text-[11px] text-white/60 no-underline">📘 Asuransi Jasindo</a>
-      <a href="#" class="text-[11px] text-white/60 no-underline">📷 jasindo.id</a>
+    <div class="flex gap-4 sm:gap-5 items-center flex-wrap">
+      <a href="#" class="text-[11px] text-white/60 no-underline flex items-center gap-1.5">
+        <i class="fa-brands fa-x-twitter"></i> @JasindoID
+      </a>
+      <a href="#" class="text-[11px] text-white/60 no-underline flex items-center gap-1.5">
+        <i class="fa-brands fa-facebook"></i> Asuransi Jasindo
+      </a>
+      <a href="#" class="text-[11px] text-white/60 no-underline flex items-center gap-1.5">
+        <i class="fa-brands fa-instagram"></i> jasindo.id
+      </a>
     </div>
-    <p class="text-[10px] text-white/45 sm:text-right leading-relaxed sm:max-w-[180px]">
+    <p class="text-[10px] text-white/45 sm:text-left leading-relaxed sm:max-w-[180px]">
       Kantor Pusat: Graha Jasindo, Jln. Menteng Raya No. 21, Jakarta Pusat 10340<br>
       Telp. (021) 3924737 / 3924748
     </p>
