@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jasindo Travel Insurance – Brochure</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: { 'blue-deep': '#0F2D5E', 'blue-mid': '#1A4A8A' },
+        fontFamily: { montserrat: ['Montserrat','sans-serif'], lato: ['Lato','sans-serif'] }
+      }
+    }
+  }
+</script>
+<style>
+  body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .shield-shape { clip-path: polygon(50% 0%, 100% 20%, 100% 70%, 50% 100%, 0% 70%, 0% 20%); }
+  .cover-deco::before { content:'';position:absolute;top:-80px;right:-80px;width:420px;height:420px;border-radius:50%;background:rgba(6,182,212,.18);pointer-events:none; }
+  .cover-deco::after  { content:'';position:absolute;bottom:60px;left:-100px;width:350px;height:350px;border-radius:50%;background:rgba(249,115,22,.12);pointer-events:none; }
+  .map-deco::before { content:'';position:absolute;top:-40px;left:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.06); }
+  .map-deco::after  { content:'';position:absolute;bottom:-60px;right:-60px;width:250px;height:250px;border-radius:50%;background:rgba(249,115,22,.10); }
+  .route-line { flex:1;height:2px;background:linear-gradient(90deg,#1A4A8A,#06B6D4); }
+  .head-blue   { background:linear-gradient(135deg,#0F2D5E,#1A4A8A); }
+  .head-teal   { background:linear-gradient(135deg,#0891B2,#06B6D4); }
+  .head-orange { background:linear-gradient(135deg,#EA580C,#F97316); }
+  .head-gold   { background:linear-gradient(135deg,#B45309,#F59E0B); }
+  .head-purple { background:linear-gradient(135deg,#5B21B6,#7C3AED); }
+  .head-green  { background:linear-gradient(135deg,#065F46,#059669); }
+  /* Language toggle button */
+  .lang-btn { position:fixed;top:18px;right:18px;z-index:9999; }
+</style>
+</head>
+<body class="font-lato text-slate-800 bg-slate-100">
+
+<!-- Language Toggle Button -->
+<div style="position:fixed;top:18px;right:18px;z-index:9999">
+  <a href="index.html" style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border:1px solid #cbd5e1;box-shadow:0 4px 16px rgba(0,0,0,0.12);color:#0F2D5E;font-family:Montserrat,sans-serif;font-weight:700;font-size:11px;padding:7px 14px;border-radius:9999px;text-decoration:none;">
+    <i class="fa-solid fa-language"></i> Bahasa Indonesia
+  </a>
+</div>
+
+<!-- Language Toggle Button -->
+<div class="lang-btn">
+  <a href="index.html" class="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur border border-slate-300 shadow-lg text-blue-deep font-montserrat font-bold text-xs px-3.5 py-2 rounded-full hover:bg-blue-deep hover:text-white transition-all">
+    <i class="fa-solid fa-language"></i> Bahasa Indonesia
+  </a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAGE 1 · COVER
+════════════════════════════════════════════ -->
+<div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden">
+  <div class="cover-deco relative flex flex-col min-h-screen"
+       style="background:linear-gradient(160deg,#0F2D5E 0%,#1A4A8A 45%,#0891B2 100%)">
+
+    <div class="relative z-10 flex justify-between items-center px-5 sm:px-10 pt-7">
+      <img src="danantara-white.png" width="100" alt="Danantara Indonesia">
+      <img src="jasindo-white.png"   width="100" alt="Jasindo">
+    </div>
+
+    <div class="relative z-10 flex-1 flex flex-col items-center text-center px-5 sm:px-10 pt-10 pb-8">
+
+      <div class="inline-flex items-center gap-2 bg-white/[.15] border border-white/30 text-white text-[11px] tracking-[2px] uppercase px-5 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+        <i class="fa-solid fa-shield-halved"></i> Protection in Every Journey
+      </div>
+
+      <div class="font-montserrat font-black leading-none text-white mb-3">
+        <span class="block text-5xl sm:text-[58px]">Jasindo</span>
+        <span class="block text-5xl sm:text-[58px] text-orange-400">Travel</span>
+        <span class="block text-3xl sm:text-[38px] font-bold text-white/90 mt-1">Insurance</span>
+      </div>
+      <p class="text-white/80 text-sm sm:text-[15px] tracking-wide mb-9">
+        Comprehensive protection for your every journey • Domestic &amp; International
+      </p>
+
+      <div class="w-44 h-52 mx-auto mb-9">
+        <div class="shield-shape w-full h-full flex items-center justify-center"
+             style="background:linear-gradient(180deg,#06B6D4,#0891B2);box-shadow:0 12px 40px rgba(6,182,212,.5)">
+          <div class="text-center">
+            <span class="block text-sm font-semibold text-white/85 font-montserrat">Starting from IDR</span>
+            <span class="block text-[28px] font-black text-white font-montserrat leading-none">17.500</span>
+            <span class="block text-[11px] text-white/70 mt-0.5">per person / 24 hours</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-9">
+        <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
+          <i class="fa-solid fa-kit-medical text-orange-400 shrink-0"></i>Emergency Medical Protection
+        </div>
+        <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
+          <i class="fa-solid fa-person-falling-burst text-orange-400 shrink-0"></i>Personal Accident
+        </div>
+        <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
+          <i class="fa-solid fa-suitcase-rolling text-orange-400 shrink-0"></i>Baggage Protection
+        </div><br></br>
+        <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
+          <i class="fa-solid fa-clock-rotate-left text-orange-400 shrink-0"></i>Travel Delay
+        </div>
+        <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
+          <i class="fa-solid fa-calendar-xmark text-orange-400 shrink-0"></i>Trip Cancellation
+        </div>
+        <div class="bg-white/[.12] border border-white/25 text-white px-3 sm:px-4 py-2 rounded-lg text-xs font-semibold flex items-center gap-2 backdrop-blur-sm">
+          <i class="fa-solid fa-person-running text-orange-400 shrink-0"></i>Extreme Activities
+        </div>
+      </div>
+
+      <div class="bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl px-6 sm:px-8 py-5 w-full max-w-lg mx-auto">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <p class="text-[10px] text-white/55 tracking-widest uppercase mb-1">Premium Starting From</p>
+            <p class="text-sm text-orange-400 font-bold font-montserrat">IDR 17,500 / person</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-white/55 tracking-widest uppercase mb-1">Coverage Duration</p>
+            <p class="text-sm text-white font-bold font-montserrat">24 Hours (1×24 hrs)</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-white/55 tracking-widest uppercase mb-1">Travel Route</p>
+            <p class="text-sm text-white font-bold font-montserrat">SANUR → NUSA PENIDA</p>
+          </div>
+          <div>
+            <p class="text-[10px] text-white/55 tracking-widest uppercase mb-1">Total Coverage Value</p>
+            <p class="text-sm text-orange-400 font-bold font-montserrat">Up to IDR 364 Million+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative z-10 border-t border-white/15 px-5 sm:px-10 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+      <div class="flex items-center gap-2">
+        <span class="text-[10px] text-white/50 tracking-widest uppercase">Powered by</span>
+        <img src="pp-boker-logo.png" width="90" alt="PasarPolis Broker">
+      </div>
+      <p class="text-[10px] text-white/50 sm:text-right leading-relaxed">Jasindo Insurance is licensed and supervised by the Financial Services Authority (OJK)</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 2 · COVERAGE BENEFITS
+════════════════════════════════════════════ -->
+<div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden">
+
+  <div class="px-5 sm:px-10 py-7 flex justify-between items-center"
+       style="background:linear-gradient(90deg,#0F2D5E,#1A4A8A)">
+    <div>
+      <h2 class="font-montserrat font-extrabold text-xl sm:text-2xl text-white">
+        Coverage <span class="text-orange-400">Benefits</span>
+      </h2>
+      <p class="text-xs text-white/60 mt-0.5">Coverage Benefits — Jasindo Travel Insurance</p>
+    </div>
+    <span class="font-montserrat font-black text-5xl text-white/10">02</span>
+  </div>
+
+  <div class="px-5 sm:px-10 py-8">
+
+    <div class="flex items-center bg-gradient-to-r from-blue-50 via-cyan-50 to-blue-50 border border-slate-200 rounded-2xl px-5 py-4 mb-5">
+      <div class="text-center shrink-0">
+        <p class="font-montserrat font-extrabold text-base text-blue-deep">SANUR</p>
+        <p class="text-[10px] text-slate-500 tracking-widest uppercase mt-0.5">Departure</p>
+      </div>
+      <div class="flex-1 flex items-center px-3">
+        <div class="route-line"></div>
+        <i class="fa-solid fa-ship text-xl px-2 text-blue-mid"></i>
+        <div class="route-line"></div>
+      </div>
+      <div class="text-center shrink-0">
+        <p class="font-montserrat font-extrabold text-sm sm:text-base text-blue-deep">NUSA PENIDA</p>
+        <p class="text-[10px] text-slate-500 tracking-widest uppercase mt-0.5">Destination</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3 mb-5">
+      <div class="w-1 h-7 bg-orange-500 rounded shrink-0"></div>
+      <div>
+        <p class="font-montserrat font-extrabold text-base text-blue-deep">Insurance Benefit Details</p>
+        <p class="text-xs text-slate-500">Maximum coverage value per incident</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-7">
+
+      <!-- Personal Accident -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200">
+        <div class="head-blue px-4 py-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-shield-halved text-white text-xl"></i>
+          </div>
+          <p class="font-montserrat font-bold text-sm text-white leading-tight">Personal Accident<br>(Kecelakaan Diri)</p>
+        </div>
+        <div class="bg-white px-4 py-4">
+          <p class="font-montserrat font-black text-2xl text-blue-deep leading-none mb-1.5"><span class="text-xs font-semibold text-slate-500">IDR </span>250,000,000</p>
+          <p class="text-[11.5px] text-slate-500 leading-relaxed mb-2">Per accident incident during the journey</p>
+          <ul class="space-y-0">
+            <li class="flex justify-between py-1 border-b border-dashed border-slate-200 text-[11.5px] text-slate-500"><span>Death Due to Accident</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 250 M</span></li>
+            <li class="flex justify-between py-1 text-[11.5px] text-slate-500"><span>Permanent Disability</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 250 M</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Emergency Medical -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200">
+        <div class="head-teal px-4 py-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/[.18] flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-kit-medical text-white text-xl"></i>
+          </div>
+          <p class="font-montserrat font-bold text-sm text-white leading-tight">Emergency Medical Protection<br>(Perlindungan Medis)</p>
+        </div>
+        <div class="bg-white px-4 py-4">
+          <p class="font-montserrat font-black text-2xl text-blue-deep leading-none mb-1.5"><span class="text-xs font-semibold text-slate-500">IDR </span>50,000,000</p>
+          <p class="text-[11.5px] text-slate-500 leading-relaxed mb-2">Emergency medical expenses during travel</p>
+          <ul class="space-y-0">
+            <li class="flex justify-between py-1 border-b border-dashed border-slate-200 text-[11.5px] text-slate-500"><span>Emergency Inpatient Care</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">Max. 50 M</span></li>
+            <li class="flex justify-between py-1 border-b border-dashed border-slate-200 text-[11.5px] text-slate-500"><span>Outpatient &amp; Emergency Dental</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">Max. 50 M</span></li>
+            <li class="flex justify-between py-1 text-[11.5px] text-slate-500"><span>Surgery (Illness &amp; Accident)</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">Max. 50 M</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Baggage -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200">
+        <div class="head-orange px-4 py-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-suitcase-rolling text-white text-xl"></i>
+          </div>
+          <p class="font-montserrat font-bold text-sm text-white leading-tight">Baggage &amp; Personal<br>Belongings Protection</p>
+        </div>
+        <div class="bg-white px-4 py-4">
+          <p class="font-montserrat font-black text-2xl text-blue-deep leading-none mb-1.5"><span class="text-xs font-semibold text-slate-500">IDR </span>3,000,000</p>
+          <p class="text-[11.5px] text-slate-500 leading-relaxed mb-2">Loss or damage to belongings during travel</p>
+          <ul class="space-y-0">
+            <li class="flex justify-between py-1 border-b border-dashed border-slate-200 text-[11.5px] text-slate-500"><span>Personal Baggage Cover</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 3 M</span></li>
+            <li class="flex justify-between py-1 text-[11.5px] text-slate-500"><span>Electronics &amp; Fashion Loss</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 3 M</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Travel Delay -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200">
+        <div class="head-gold px-4 py-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-clock text-white text-xl"></i>
+          </div>
+          <p class="font-montserrat font-bold text-sm text-white leading-tight">Travel Delay<br>(Penundaan Perjalanan)</p>
+        </div>
+        <div class="bg-white px-4 py-4">
+          <p class="font-montserrat font-black text-2xl text-blue-deep leading-none mb-1.5"><span class="text-xs font-semibold text-slate-500">IDR </span>2,000,000</p>
+          <p class="text-[11.5px] text-slate-500 leading-relaxed mb-2">Compensation for transport delays ≥ 6 consecutive hours</p>
+          <ul class="space-y-0">
+            <li class="flex justify-between py-1 text-[11.5px] text-slate-500"><span>Per 6-hour delay (max.)</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 2 M</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Trip Cancellation -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200">
+        <div class="head-purple px-4 py-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-calendar-xmark text-white text-xl"></i>
+          </div>
+          <p class="font-montserrat font-bold text-sm text-white leading-tight">Trip Cancellation &amp;<br>Curtailment</p>
+        </div>
+        <div class="bg-white px-4 py-4">
+          <p class="font-montserrat font-black text-2xl text-blue-deep leading-none mb-1.5"><span class="text-xs font-semibold text-slate-500">IDR </span>3,000,000</p>
+          <p class="text-[11.5px] text-slate-500 leading-relaxed mb-2">Reimbursement of pre-paid tickets/hotel costs</p>
+          <ul class="space-y-0">
+            <li class="flex justify-between py-1 border-b border-dashed border-slate-200 text-[11.5px] text-slate-500"><span>Trip Cancellation</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 3 M</span></li>
+            <li class="flex justify-between py-1 border-b border-dashed border-slate-200 text-[11.5px] text-slate-500"><span>Early Return</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 3 M</span></li>
+            <li class="flex justify-between py-1 text-[11.5px] text-slate-500"><span>Alternative Travel Costs</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 3 M</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Extreme Activities -->
+      <div class="rounded-2xl overflow-hidden border border-slate-200">
+        <div class="head-green px-4 py-3.5 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-person-running text-white text-xl"></i>
+          </div>
+          <p class="font-montserrat font-bold text-sm text-white leading-tight">Extreme Activities &amp;<br>Amusement Rides</p>
+        </div>
+        <div class="bg-white px-4 py-4">
+          <p class="font-montserrat font-black text-2xl text-blue-deep leading-none mb-1.5"><span class="text-xs font-semibold text-slate-500">IDR </span>50,000,000</p>
+          <p class="text-[11.5px] text-slate-500 leading-relaxed mb-2">Death/permanent disability due to extreme activities &amp; rides</p>
+          <ul class="space-y-0">
+            <li class="flex justify-between py-1 border-b border-dashed border-slate-200 text-[11.5px] text-slate-500"><span>Death Due to Extreme Activity</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 50 M</span></li>
+            <li class="flex justify-between py-1 text-[11.5px] text-slate-500"><span>Permanent Disability (Extreme)</span><span class="font-montserrat font-bold text-[11px] text-blue-deep shrink-0 ml-2">IDR 50 M</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="rounded-2xl px-5 sm:px-7 py-5 flex flex-col sm:flex-row justify-around items-center gap-4 text-center"
+         style="background:linear-gradient(90deg,#0F2D5E,#0891B2)">
+      <div>
+        <p class="text-xs text-white/70 tracking-wide uppercase mb-1">Total Coverage Value</p>
+        <p class="font-montserrat font-black text-orange-400 text-2xl sm:text-[26px]">IDR 364,000,000+</p>
+      </div>
+      <div class="hidden sm:block w-px h-12 bg-white/20"></div>
+      <div>
+        <p class="text-xs text-white/70 tracking-wide uppercase mb-1">Premium Paid</p>
+        <p class="font-montserrat font-black text-lg text-white">IDR 17,500</p>
+      </div>
+      <div class="hidden sm:block w-px h-12 bg-white/20"></div>
+      <div>
+        <p class="text-xs text-white/70 tracking-wide uppercase mb-1">Coverage Duration</p>
+        <p class="font-montserrat font-black text-lg text-white">24 Hours</p>
+      </div>
+      <div class="hidden sm:block w-px h-12 bg-white/20"></div>
+      <div>
+        <p class="text-xs text-white/70 tracking-wide uppercase mb-1">Travel Type</p>
+        <p class="font-montserrat font-black text-lg text-white">Domestic</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 3 · POLICY & CLAIMS INFORMATION
+════════════════════════════════════════════ -->
+<div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden">
+
+  <div class="px-5 sm:px-10 py-7 flex justify-between items-center"
+       style="background:linear-gradient(90deg,#0F2D5E,#1A4A8A)">
+    <div>
+      <h2 class="font-montserrat font-extrabold text-xl sm:text-2xl text-white">
+        Policy &amp; <span class="text-orange-400">Claims Information</span>
+      </h2>
+      <p class="text-xs text-white/60 mt-0.5">Terms, Conditions &amp; Claim Procedures</p>
+    </div>
+    <span class="font-montserrat font-black text-5xl text-white/10">03</span>
+  </div>
+
+  <div class="px-5 sm:px-10 py-8">
+
+    <div class="bg-gradient-to-br from-orange-50 to-amber-100 border-2 border-orange-400 rounded-2xl px-5 py-4 flex items-start gap-3.5 mb-6">
+      <i class="fa-solid fa-triangle-exclamation text-3xl text-orange-500 shrink-0 mt-0.5"></i>
+      <div>
+        <p class="font-montserrat font-extrabold text-sm text-orange-700 mb-1">Important — Please Read Before Your Journey</p>
+        <p class="text-xs text-amber-900 leading-relaxed">All benefits stated in this brochure represent maximum values. Actual payment is subject to the terms of the Master Policy. Keep this brochure and contact our call center 1500073 in case of emergency.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
+
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
+        <div class="bg-blue-deep px-5 py-3.5 flex items-center gap-2.5">
+          <div class="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center">
+            <i class="fa-solid fa-file-lines text-white text-sm"></i>
+          </div>
+          <span class="font-montserrat font-bold text-sm text-white">Product Details</span>
+        </div>
+        <div class="px-5 py-3 divide-y divide-slate-200">
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Product Name</p><p class="font-montserrat font-bold text-sm text-blue-deep">Jasindo Travel Insurance</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Insurer</p><p class="font-montserrat font-bold text-sm text-blue-deep">PT Asuransi Jasa Indonesia</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Distributor</p><p class="font-montserrat font-bold text-xs text-blue-deep">PT Mitra Kasih Perkasa (MKP)</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Territory</p><p class="font-montserrat font-bold text-sm text-blue-deep">Domestic Indonesia</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Premium Starting From</p><p class="font-montserrat font-bold text-sm text-orange-600">IDR 17,500 / person</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Claims Portal</p><p class="font-montserrat font-bold text-xs text-blue-deep">mkp.ppibroker.com</p></div>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden">
+        <div class="px-5 py-3.5 flex items-center gap-2.5" style="background:linear-gradient(90deg,#0891B2,#06B6D4)">
+          <div class="w-8 h-8 bg-white/15 rounded-lg flex items-center justify-center">
+            <i class="fa-solid fa-clock text-white text-sm"></i>
+          </div>
+          <span class="font-montserrat font-bold text-sm text-white">Policy Terms</span>
+        </div>
+        <div class="px-5 py-3 divide-y divide-slate-200">
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Insured Age</p><p class="font-montserrat font-bold text-sm text-blue-deep">0 days – 80 years</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Coverage Territory</p><p class="font-montserrat font-bold text-sm text-blue-deep">Domestic (Indonesia)</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Auto-Extension</p><p class="font-montserrat font-bold text-sm text-blue-deep">Up to 7 days (certain conditions)</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Claim Payment</p><p class="font-montserrat font-bold text-sm text-blue-deep">Max. 30 calendar days</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Claim Notification</p><p class="font-montserrat font-bold text-sm text-blue-deep">Max. 45 calendar days</p></div>
+          <div class="py-2"><p class="text-[10px] text-slate-500 tracking-[.8px] uppercase mb-0.5">Insurance Provider</p><p class="font-montserrat font-bold text-xs text-blue-deep">PT Asuransi Jasa Indonesia</p></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-1 h-7 bg-orange-500 rounded shrink-0"></div>
+      <div>
+        <p class="font-montserrat font-extrabold text-base text-blue-deep">How to File a Claim</p>
+        <p class="text-xs text-slate-500">Simple steps to receive your reimbursement</p>
+      </div>
+    </div>
+
+    <div class="divide-y divide-slate-200 mb-6">
+      <div class="flex gap-4 items-start py-3.5">
+        <div class="w-9 h-9 rounded-full bg-blue-mid text-white font-montserrat font-extrabold text-[15px] flex items-center justify-center shrink-0">1</div>
+        <div>
+          <p class="font-montserrat font-bold text-sm text-blue-deep mb-1"><i class="fa-solid fa-bell text-orange-400 mr-1.5"></i>Claim Notification</p>
+          <p class="text-xs text-slate-500 leading-relaxed">Contact Jasindo Call Center at <strong>1500073</strong> or visit <strong>https://mkp.ppibroker.com</strong> within max. 45 calendar days of the incident. Emergency: <strong>(+62) 818 343 494</strong> (WhatsApp PPIB).</p>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start py-3.5">
+        <div class="w-9 h-9 rounded-full bg-blue-mid text-white font-montserrat font-extrabold text-[15px] flex items-center justify-center shrink-0">2</div>
+        <div>
+          <p class="font-montserrat font-bold text-sm text-blue-deep mb-1"><i class="fa-solid fa-folder-open text-orange-400 mr-1.5"></i>Document Submission</p>
+          <p class="text-xs text-slate-500 leading-relaxed">Claim form, copy of policy &amp; ID (KTP/Passport), tickets &amp; boarding passes, official authority report, medical summary (if applicable).</p>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start py-3.5">
+        <div class="w-9 h-9 rounded-full bg-blue-mid text-white font-montserrat font-extrabold text-[15px] flex items-center justify-center shrink-0">3</div>
+        <div>
+          <p class="font-montserrat font-bold text-sm text-blue-deep mb-1"><i class="fa-solid fa-magnifying-glass text-orange-400 mr-1.5"></i>Verification Process</p>
+          <p class="text-xs text-slate-500 leading-relaxed">Jasindo's claims team verifies all documents. FCR: 1 working day; Non-FCR: max. 10 working days after complete documents are received.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start py-3.5">
+        <div class="w-9 h-9 rounded-full bg-blue-mid text-white font-montserrat font-extrabold text-[15px] flex items-center justify-center shrink-0">4</div>
+        <div>
+          <p class="font-montserrat font-bold text-sm text-blue-deep mb-1"><i class="fa-solid fa-money-bill-transfer text-orange-400 mr-1.5"></i>Claim Payment</p>
+          <p class="text-xs text-slate-500 leading-relaxed">Upon approval, payment is transferred within <strong>30 calendar days</strong>. Accepted claims release the Insurer from all obligations for the benefit concerned.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-1 h-7 bg-orange-600 rounded shrink-0"></div>
+      <p class="font-montserrat font-extrabold text-base text-orange-700">What Is Not Covered</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Pre-existing medical conditions prior to travel</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Travel against medical advice</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Unlawful acts, suicide, or intentional self-injury</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">War, civil unrest, terrorism, nuclear/chemical/biological disasters</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Drug, alcohol, or narcotics abuse</span></div>
+      <div class="flex gap-2.5 items-start bg-red-50 border border-red-200 rounded-xl px-3 py-2.5"><i class="fa-solid fa-xmark text-red-500 shrink-0 mt-0.5"></i><span class="text-[11.5px] text-red-900 leading-relaxed">Insured's own negligence in safeguarding personal belongings</span></div>
+    </div>
+
+    <div class="rounded-2xl px-5 sm:px-7 py-6 flex flex-col sm:flex-row justify-around items-center flex-wrap gap-5"
+         style="background:linear-gradient(90deg,#0F2D5E,#1A4A8A)">
+      <div class="text-center">
+        <i class="fa-solid fa-phone text-2xl text-white/80 mb-1.5 block"></i>
+        <p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Call Center</p>
+        <p class="font-montserrat font-bold text-sm text-white">(021) 3924737</p>
+      </div>
+      <div class="hidden sm:block w-px h-12 bg-white/15"></div>
+      <div class="text-center">
+        <i class="fa-solid fa-globe text-2xl text-white/80 mb-1.5 block"></i>
+        <p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Website</p>
+        <p class="font-montserrat font-bold text-sm text-white">jasindo.co.id</p>
+      </div>
+      <div class="hidden sm:block w-px h-12 bg-white/15"></div>
+      <div class="text-center">
+        <i class="fa-solid fa-envelope text-2xl text-white/80 mb-1.5 block"></i>
+        <p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">Email</p>
+        <p class="font-montserrat font-bold text-xs text-white">contactcenter@jasindo.co.id</p>
+      </div>
+      <div class="hidden sm:block w-px h-12 bg-white/15"></div>
+      <div class="text-center">
+        <i class="fa-solid fa-building text-2xl text-white/80 mb-1.5 block"></i>
+        <p class="text-[10px] text-white/60 tracking-widest uppercase mb-1">24-Hour Emergency</p>
+        <p class="font-montserrat font-bold text-sm text-white">1500073</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 4 · FAQ
+════════════════════════════════════════════ -->
+<div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden">
+
+  <div class="px-5 sm:px-10 py-7 flex justify-between items-center"
+       style="background:linear-gradient(90deg,#0F2D5E,#1A4A8A)">
+    <div>
+      <h2 class="font-montserrat font-extrabold text-xl sm:text-2xl text-white">
+        Frequently Asked <span class="text-orange-400">Questions</span>
+      </h2>
+      <p class="text-xs text-white/60 mt-0.5">FAQ — Common Questions About the Product</p>
+    </div>
+    <span class="font-montserrat font-black text-5xl text-white/10">04</span>
+  </div>
+
+  <div class="px-5 sm:px-10 py-8">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">01</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">What is Jasindo Travel Insurance?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Jasindo Travel Insurance is an additional protection that provides accident coverage, 100% ticket refund, and loss of belongings during your journey.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">02</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">How is it different from mandatory Jasa Raharja insurance?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Jasa Raharja's mandatory insurance only applies if a vessel accident occurs, whereas Jasindo Travel Insurance does not require a vessel accident to have happened.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">03</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">How much is the premium and does it apply per person?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">The premium is charged per passenger and will be displayed during the ticket purchase process. The premium amount follows the applicable terms at the time of transaction.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">04</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">When does coverage start and end?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Coverage applies as per the travel date stated on the ticket and policy, with a coverage period of up to 1×24 hours as per product terms.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">05</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">What types of accidents are covered?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Accidents that occur suddenly, unintentionally, resulting in injury, permanent disability, or death as per policy terms.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">06</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Does coverage only apply while on board the vessel?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Coverage also applies during the journey and wherever you are, as long as it is within the policy period — 1 day on the date of departure.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">07</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Can sudden illness before departure be claimed?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Reimbursement for travel tickets can be claimed. However, treatment costs other than accidents and outside the departure date are not covered.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">08</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">What is the maximum benefit I can receive?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">The maximum benefit is as stated in the benefit table; however, the amount paid is usually in accordance with the ticket price/receipt.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">09</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">How do I file a claim?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Visit the claims portal at <strong class="text-blue-mid">mkp.ppibroker.com</strong>, log in using your phone number and OTP. Details are also sent to your email after purchasing the policy.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">10</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">What items are covered in case of loss?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Electronics, bags, and watches, subject to the limits and conditions stated in the policy or product summary (RIPLAY).</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">11</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">What documents are required to file a claim?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Personal ID, travel ticket, insurance brochure, and supporting documents according to the claim type. Details are communicated via the claims portal.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">12</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">How long does the claim process take?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Estimated completion of maximum <strong class="text-blue-mid">7 working days</strong> after documents are declared complete and compliant.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-gradient-to-br from-blue-50 to-cyan-50 border border-cyan-300 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-cyan-500/50 leading-none shrink-0 w-7 text-right pt-px">13</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Who do I contact to file a claim or get assistance?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">WhatsApp PPIB: <strong class="text-blue-mid">(+62) 818 343 494</strong> · Call Center: <strong class="text-blue-mid">1500073</strong> · Portal: <strong class="text-blue-mid">mkp.ppibroker.com</strong></p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">14</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Will I receive my policy document after purchase?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Yes, you can view and download your policy document at <strong class="text-blue-mid">mkp.ppibroker.com</strong> by logging in with your phone number and OTP.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">15</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">How do I view or download my policy?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Log in at <strong class="text-blue-mid">mkp.ppibroker.com</strong> using your phone number and OTP, then select the policy card you wish to download.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">16</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">What if passenger or manifest data is incorrect?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Immediately contact WhatsApp PPIB <strong class="text-blue-mid">(+62) 818 343 494</strong> with your transaction data and ID.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">17</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">My registered phone number is lost or inactive?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Immediately contact WhatsApp PPIB <strong class="text-blue-mid">(+62) 818 343 494</strong> to update your data, providing your transaction data and ID.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-blue-500/25 leading-none shrink-0 w-7 text-right pt-px">18</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Why was my claim rejected or payment not received?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">Claims may be rejected if they do not meet policy terms, including risks that are not covered or incomplete documentation.</p></div></div>
+      <div class="flex gap-3.5 items-start bg-gradient-to-br from-blue-50 to-cyan-50 border border-cyan-300 rounded-xl px-4 py-3.5"><span class="font-montserrat font-black text-xl text-cyan-500/50 leading-none shrink-0 w-7 text-right pt-px">19</span><div><p class="font-montserrat font-bold text-xs text-blue-deep mb-1 leading-tight">Is this product officially regulated by OJK?</p><p class="text-[11.5px] text-slate-500 leading-[1.55]">This product is issued by PT Asuransi Jasa Indonesia, a member of IFG, under the supervision of the <strong class="text-blue-mid">Financial Services Authority (OJK)</strong>.</p></div></div>
+    </div>
+
+    <div class="rounded-2xl px-5 sm:px-7 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-5"
+         style="background:linear-gradient(90deg,#0F2D5E,#0891B2)">
+      <i class="fa-solid fa-comments text-3xl text-white/80 shrink-0"></i>
+      <div class="flex-1">
+        <p class="font-montserrat font-extrabold text-base text-white mb-1">Still have questions?</p>
+        <p class="text-xs text-white/70">Contact our team via WhatsApp or Call Center for further assistance</p>
+      </div>
+      <div class="flex flex-row sm:flex-col gap-2 w-full sm:w-auto shrink-0">
+        <div class="bg-white/15 border border-white/30 text-white px-4 py-2 rounded-lg text-xs font-bold font-montserrat text-center whitespace-nowrap flex items-center justify-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-green-400"></i> WA: (+62) 818 343 494
+        </div>
+        <div class="bg-orange-500 text-white px-4 py-2 rounded-lg text-xs font-bold font-montserrat text-center whitespace-nowrap flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-phone"></i> 1500073
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE 5 · BRANCH OFFICES MAP
+════════════════════════════════════════════ -->
+<div class="w-full max-w-3xl mx-auto mb-8 bg-white shadow-2xl overflow-hidden flex flex-col">
+
+  <div class="map-deco relative overflow-hidden px-5 sm:px-10 py-9 text-center"
+       style="background:linear-gradient(135deg,#0F2D5E,#0891B2)">
+    <p class="relative z-10 text-[11px] text-white/60 tracking-[2px] uppercase mb-2.5">National Service Network</p>
+    <h2 class="relative z-10 font-montserrat font-black text-2xl sm:text-3xl text-white leading-tight">
+      30 Representative <span class="text-orange-400">Offices</span><br>Across Indonesia
+    </h2>
+    <p class="relative z-10 text-sm text-white/70 mt-2">We are present in every corner of the archipelago — ready to assist whenever you need us</p>
+  </div>
+
+  <div class="flex justify-center gap-8 sm:gap-10 px-5 sm:px-10 pt-6">
+    <div class="text-center"><p class="font-montserrat font-black text-4xl text-orange-500 leading-none">30</p><p class="text-xs text-slate-500 mt-1">Branch Offices</p></div>
+    <div class="text-center"><p class="font-montserrat font-black text-4xl text-orange-500 leading-none">24/7</p><p class="text-xs text-slate-500 mt-1">Emergency Service</p></div>
+    <div class="text-center"><p class="font-montserrat font-black text-2xl sm:text-3xl text-orange-500 leading-none">1500073</p><p class="text-xs text-slate-500 mt-1">Call Center</p></div>
+  </div>
+
+  <div class="flex-1 px-5 sm:px-10 py-4 flex items-center justify-center">
+    <img src="Picture1.png" alt="Jasindo Branch Offices Map" class="w-full max-h-80 sm:max-h-96 object-contain rounded-lg">
+  </div>
+
+  <div class="px-5 sm:px-10 py-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Medan</p><p class="text-[10px] text-cyan-600">(061) 4236448</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Pekanbaru</p><p class="text-[10px] text-cyan-600">(0761) 35858</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Batam</p><p class="text-[10px] text-cyan-600">(0778) 456727</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Padang</p><p class="text-[10px] text-cyan-600">(0751) 7415620</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Jambi</p><p class="text-[10px] text-cyan-600">(0741) 63104</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Palembang</p><p class="text-[10px] text-cyan-600">(0711) 357479</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Bandar Lampung</p><p class="text-[10px] text-cyan-600">(0721) 268364</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Serang</p><p class="text-[10px] text-cyan-600">(0254) 8486424</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Jakarta 2</p><p class="text-[10px] text-cyan-600">(021) 29020046</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Bogor</p><p class="text-[10px] text-cyan-600">(0251) 862718</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Bandung</p><p class="text-[10px] text-cyan-600">(022) 4221858</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Semarang</p><p class="text-[10px] text-cyan-600">(024) 8414082</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Yogyakarta</p><p class="text-[10px] text-cyan-600">(0274) 512778</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Solo</p><p class="text-[10px] text-cyan-600">(0271) 741497</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Surabaya</p><p class="text-[10px] text-cyan-600">(031) 5670912</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Pontianak</p><p class="text-[10px] text-cyan-600">(0561) 732446</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Sampit</p><p class="text-[10px] text-cyan-600">(0531) 21741</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Banjarmasin</p><p class="text-[10px] text-cyan-600">(0511) 3526872</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Samarinda</p><p class="text-[10px] text-cyan-600">(0541) 742571</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Balikpapan</p><p class="text-[10px] text-cyan-600">(0542) 413495</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Makassar</p><p class="text-[10px] text-cyan-600">(0411) 8737888</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Kendari</p><p class="text-[10px] text-cyan-600">(0401) 3121764</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Manado</p><p class="text-[10px] text-cyan-600">(0431) 863466</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Palu</p><p class="text-[10px] text-cyan-600">(0451) 421898</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Denpasar</p><p class="text-[10px] text-cyan-600">(0361) 225327</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Mataram</p><p class="text-[10px] text-cyan-600">(0370) 865422</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Kupang</p><p class="text-[10px] text-cyan-600">(0380) 736446</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Ambon</p><p class="text-[10px] text-cyan-600">(0911) 352262</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Sorong</p><p class="text-[10px] text-cyan-600">(0951) 302344</p></div>
+    <div class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5"><p class="font-montserrat font-bold text-[11px] text-blue-deep mb-1"><i class="fa-solid fa-location-dot text-orange-400 mr-1 text-[10px]"></i>Jayapura</p><p class="text-[10px] text-cyan-600">(0967) 5108458</p></div>
+  </div>
+
+  <div class="bg-blue-deep px-5 sm:px-10 py-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+    <div>
+      <img src="jasindo-white.png" width="100" alt="Jasindo">
+    </div>
+    <div class="flex gap-4 sm:gap-5 items-center flex-wrap">
+      <a href="#" class="text-[11px] text-white/60 no-underline flex items-center gap-1.5"><i class="fa-brands fa-x-twitter"></i> @JasindoID</a>
+      <a href="#" class="text-[11px] text-white/60 no-underline flex items-center gap-1.5"><i class="fa-brands fa-facebook"></i> Asuransi Jasindo</a>
+      <a href="#" class="text-[11px] text-white/60 no-underline flex items-center gap-1.5"><i class="fa-brands fa-instagram"></i> jasindo.id</a>
+    </div>
+    <p class="text-[10px] text-white/45 sm:text-left leading-relaxed sm:max-w-[180px]">
+      Head Office: Graha Jasindo, Jln. Menteng Raya No. 21, Jakarta Pusat 10340<br>
+      Tel. (021) 3924737 / 3924748
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
